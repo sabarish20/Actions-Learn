@@ -1,6 +1,6 @@
 name: First-CI
 
-on: [push, fork]
+on: push
 
 jobs: 
     first-job:
