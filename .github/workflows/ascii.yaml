@@ -11,17 +11,17 @@ jobs:
               uses: actions/checkout@v4
 
             - name: Install Cowsay
-              uses: sudo apt-get install cowsay -y
+              run: sudo apt-get install cowsay -y
 
             - name: Run Cowsay
-              uses: cowsay -f dragon "Draa Draa Dragoonnn" >> dragon.txt
+              run: cowsay -f dragon "Draa Draa Dragoonnn" >> dragon.txt
 
             - name: Test File
-              uses: grep -i "dra" dragon.txt
+              run: grep -i "dra" dragon.txt
               
             - name: Read File
-              uses: cat dragon.txt
+              run: cat dragon.txt
 
             - name: List Files
-              uses: ls -la
-              
+              run: ls -la
+
