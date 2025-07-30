@@ -9,7 +9,7 @@ jobs:
             - name: Checkout
               uses: actions/checkout@v4
 
-            - name: List and Read Fileß
+            - name: List and Read Files
               run: |
                   echo "Hello"
                   ls
