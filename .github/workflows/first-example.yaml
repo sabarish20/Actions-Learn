@@ -9,11 +9,11 @@ jobs:
             - name: Checkout
               uses: actions/checkout@v4
 
-            - name: Welcome
-              run: echo "Hello"
-
-            - name: List Files
-              run: ls
-        
-            - name: Read Files
-              run: cat README.md
+            - name: List and Read Fileß
+              run: |
+                  echo "Hello"
+                  ls
+                  cat README.md
+            
+            - name: Generate ASCII Artwork
+              run: cowsay -f dragon "Dragon" >> dragon.txt
