@@ -1,0 +1,27 @@
+name: ASCII-ART
+
+on: 
+    push
+
+jobs:
+    ascii-job:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v4
+
+            - name: Install Cowsay
+              uses: sudo apt-get install cowsay -y
+
+            - name: Run Cowsay
+              uses: cowsay -f dragon "Draa Draa Dragoonnn" >> dragon.txt
+
+            - name: Test File
+              uses: grep -i "dra" dragon.txt
+              
+            - name: Read File
+              uses: cat dragon.txt
+
+            - name: List Files
+              uses: ls -la
+              
