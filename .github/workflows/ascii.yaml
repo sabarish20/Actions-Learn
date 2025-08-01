@@ -10,17 +10,8 @@ jobs:
             - name: Checkout
               uses: actions/checkout@v4
 
-            - name: Install Cowsay
-              run: sudo apt-get install cowsay -y
-
-            - name: Run Cowsay
-              run: cowsay -f dragon "Ak THE RED DRAAAAGGGGOOOOONNN" >> dragon.txt
-
-            - name: Test File
-              run: grep -i "dra" dragon.txt
-              
-            - name: Read File
-              run: cat dragon.txt
+            - name: Execute Script
+              uses: ./script.sh
 
             - name: List Files
               run: ls -la
