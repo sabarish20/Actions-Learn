@@ -10,9 +10,9 @@ jobs:
             - name: Checkout
               uses: actions/checkout@v4
 
-            - name: Execute Script
-              uses: ./script.sh
-
             - name: List Files
               run: ls -la
+
+            - name: Execute Script
+              uses: ./script.sh
 
