@@ -14,5 +14,5 @@ jobs:
               run: ls -la
 
             - name: Execute Script
-              uses: ./script.sh
+              run: ./script.sh
 
