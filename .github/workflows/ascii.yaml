@@ -9,9 +9,6 @@ jobs:
         steps:
             - name: Checkout
               uses: actions/checkout@v4
-            
-            - name: Change Dir
-              run: cd .github/workflows/
 
             - name: List Files
               run: ls -la
