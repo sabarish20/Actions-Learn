@@ -1,19 +1,19 @@
-name: First-CI
+name: My-WorkFlow
 
-on: push
+on: push 
 
-jobs: 
-    first-job:
-        runs-on: ubuntu-latest
-        steps:
-            - name: Checkout
-              uses: actions/checkout@v4
+jobs:
+  first_job:
+    runs-on: ubuntu:latest
+    steps:
+    - name: Checkout Repo
+      uses: actions/checkout@v4
 
-            - name: List and Read Files
-              run: |
-                  echo "Hello"
-                  ls
-                  cat README.md
-            
-            - name: Generate ASCII Artwork
-              run: cowsay -f dragon "Dragon" >> dragon.txt
+    - name: List and Read File
+      run: |
+        echo "Github Actions - Redo"
+        ls -ltra
+        cat README.md 
+
+    - name: Gen ASCII 
+      run: cowsay -f dragon "Run for Github"
