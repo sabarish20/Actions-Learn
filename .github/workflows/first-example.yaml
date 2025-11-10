@@ -12,7 +12,7 @@ jobs:
     - name: List and Read File
       run: |
         echo "Github Actions - Redo"
-        ls -ltra
+        ls -la
         cat README.md 
 
     - name: Gen ASCII 
