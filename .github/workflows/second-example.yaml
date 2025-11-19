@@ -7,10 +7,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: install curl 
-      run: apt-get install curl 
+      run: sudo apt-get install curl 
 
     - name: install nginx
-      run: apt-get install nginx
+      run: sudo apt-get install nginx
 
     - name: curl nginx
       run: curl localhost:80 
