@@ -9,8 +9,9 @@ jobs:
     - name: install curl 
       run: sudo apt-get install curl 
 
-    - name: install nginx
-      run: sudo apt-get install nginx
+    - name: enable nginx
+      run: sudo systemctl start nginx.service
+
 
     - name: curl nginx
       run: curl http://localhost:80/ 
