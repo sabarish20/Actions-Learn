@@ -1,6 +1,6 @@
 name: second-example
 
-on: push
+on: workflow_dispatch
 
 jobs:
   practice-curl:
