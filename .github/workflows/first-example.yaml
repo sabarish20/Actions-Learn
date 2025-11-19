@@ -21,7 +21,7 @@ jobs:
       run: echo docker push $CONTAINER_REGISTRY/${{ vars.DOCKER_USERNAME }}/$IMAGE_NAME:latest
 
   deploy:
-    timeout-minutes: 1
+    if: github.ref == 'refs/heads/main'
     needs: docker
     concurrency:
       group: prod-deployment
